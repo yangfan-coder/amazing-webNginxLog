@@ -1,6 +1,4 @@
-// const logTable = require('./logTable');
-const connectMysql = require('./connectMysql');
-
+const logTable = require('./logTable');
 const tranferData = function (log) {
   let values = [];
 
@@ -16,11 +14,10 @@ const tranferData = function (log) {
 }
 // 获取用户传递的参数信息
 const getLogInfo = function (log) {
-  //logTable.bulkCreate(log)
-  connectMysql(tranferData(log));
+  logTable.bulkCreate(tranferData(log))
 }
 
-
+/*  模拟数据源 */
 
 
 // logTable.bulkCreate([
